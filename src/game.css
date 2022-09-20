@@ -1,0 +1,115 @@
+* {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  background-color: aliceblue;
+  color: rgba(12, 11, 54, 0.973);
+}
+
+.game-board {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  flex-wrap: wrap;
+  width: 65vh;
+}
+
+.cell {
+  flex-basis: calc(100% / 3);
+  height: 150px;
+  width: 150px;
+  border: 10px solid aliceblue;
+  border-radius: 10%;
+  text-align: center;
+  background-color: rgba(12, 11, 54, 0.973);
+  color: azure;
+  font-size: 75px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.title {
+  font-size: 120px;
+  /* color: rgba(12, 11, 54, 0.973); */
+  color: aliceblue;
+  text-shadow: 0 0 5px black;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.border-left {
+  border-left: 2px solid black;
+}
+
+.bb {
+  text-align: center;
+}
+
+.buttons {
+  background-color: aliceblue;
+  height: 40px;
+  width: 63vh;
+  font-size: 25px;
+  border: none;
+  color: rgba(12, 11, 54, 0.973);
+  text-shadow: 1px 1px 1px lightgray;
+}
+
+.buttons:hover{
+  background-color: white;
+  color: rgba(12, 11, 54, 0.973);
+  text-shadow: none;
+}
+
+.winner {
+  position: absolute;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 450px;
+  height: 450px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border-radius: 10px;
+  color: aliceblue;
+  text-shadow: 2px 2px 2px black;
+}
+.winner h2 {
+  margin-top: 10vh;
+  font-size: 130px;
+}
+
+.winner p {
+  font-size: 40px;
+}
+
+.winner button {
+  height: 50px;
+  width: 100%;
+  font-size: 25px;
+  background-color: transparent;
+  color: aliceblue;
+  text-shadow: 1px 1px 1px black;
+}
+
+.winner button:hover {
+  background-color: white;
+  color: rgba(12, 11, 54, 0.973);
+  text-shadow: none;
+}
