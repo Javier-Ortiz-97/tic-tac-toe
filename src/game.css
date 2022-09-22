@@ -3,14 +3,12 @@
   padding: 0;
   margin: 0;
 }
-
 body {
   display: flex;
   justify-content: center;
-  background-color: aliceblue;
+  background-color: white;
   color: rgba(12, 11, 54, 0.973);
 }
-
 .game-board {
   display: flex;
   align-items: center;
@@ -18,45 +16,36 @@ body {
   flex-wrap: wrap;
   width: 65vh;
 }
-
 .cell {
   flex-basis: calc(100% / 3);
   height: 150px;
-  width: 150px;
-  border: 10px solid aliceblue;
+  border: 8px solid white;
   border-radius: 10%;
   text-align: center;
   background-color: rgba(12, 11, 54, 0.973);
-  color: azure;
+  color: white;
   font-size: 75px;
 }
-
 .row {
   display: flex;
   flex-direction: row;
 }
-
 .title {
   font-size: 120px;
-  /* color: rgba(12, 11, 54, 0.973); */
   color: aliceblue;
   text-shadow: 0 0 5px black;
 }
-
 .center {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
 .border-left {
   border-left: 2px solid black;
 }
-
-.bb {
+.player {
   text-align: center;
 }
-
 .buttons {
   background-color: aliceblue;
   height: 40px;
@@ -66,13 +55,12 @@ body {
   color: rgba(12, 11, 54, 0.973);
   text-shadow: 1px 1px 1px lightgray;
 }
-
-.buttons:hover{
+.buttons:hover,
+.buttons:active {
   background-color: white;
   color: rgba(12, 11, 54, 0.973);
   text-shadow: none;
 }
-
 .winner {
   position: absolute;
   display: none;
@@ -94,11 +82,9 @@ body {
   margin-top: 10vh;
   font-size: 130px;
 }
-
 .winner p {
   font-size: 40px;
 }
-
 .winner button {
   height: 50px;
   width: 100%;
@@ -107,9 +93,31 @@ body {
   color: aliceblue;
   text-shadow: 1px 1px 1px black;
 }
-
-.winner button:hover {
+.winner button:hover,
+.winner button:active {
   background-color: white;
   color: rgba(12, 11, 54, 0.973);
   text-shadow: none;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    display: block;
+    text-align: center;
+  }
+  .title {
+    margin: 50px auto;
+    font-size: 70px;
+  }
+  .game-board {
+    margin: 10px auto;
+    max-width: 100%;
+  }
+  .cell {
+    font-size: 75px;
+  }
+  .winner {
+    width: 100%;
+    height: 455px;
+  }
 }

@@ -49,8 +49,10 @@ function Game() {
       } else if (a === b && b === c) {
         setWinner(a);
         handleWin();
-        return;
+      } else if (a !== b && b !== c) {
+        checkForDraw();
       }
+      return;
     }
     // Checking All The Different Winning Conbinations
     checkThree(game[0], game[1], game[2]);
@@ -61,18 +63,18 @@ function Game() {
     checkThree(game[2], game[5], game[8]);
     checkThree(game[0], game[4], game[8]);
     checkThree(game[2], game[4], game[6]);
-
-    // Checking For Draw
+  };
+  // Checking For Draw
+  const checkForDraw = () => {
     for (let i = 0; i < game.length; i++) {
       if (game[i] === "") {
         return;
-      } else if (game[i] === 8) {
+      } else if (i === 8) {
         setWinner("DRAW");
         handleWin();
       }
     }
   };
-
   // Resets The Game And All State Variables Back To It's Initial Values
   const newGame = () => {
     element.style.display = "none";
@@ -84,8 +86,8 @@ function Game() {
 
   return (
     <div>
-      <h1 className="title">Tic Tac Toe</h1>
-      <div className="bb">
+      <h1 className="title">Tic-Tac-Toe</h1>
+      <div className="player">
         <h2>Turn: {currentPlayer}</h2>
       </div>
       <div className="winner">
